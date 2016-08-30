@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div id="search" class="search-box">
+      <form action="" data-bind="submit:updateSearchResult">
+          <i class="fa fa-2x fa-search"></i><input id="search" type="text" class="form-control" data-bind="value: searchTerm"/>
+      </form>
+      <form action="" data-bind="submit: filterResult">
+        <i class="fa fa-2x fa-filter"></i><input id="filter" type="text" class="form-control" placeholder="filter" data-bind="value: filterTerm, valueUpdate: 'afterkeydown'"/>
+      </form>
+    </div>
+    <div id="mark_info" class="yelp-list" data-bind="css: {show: toggle}">
+      <h4 data-bind="text: status"></h4>
+      <ul id="yelp_list" data-bind="foreach: filterList">
+        <li data-bind="click: $parent.listToMarkerEvent($data, $index()), css : {active: $index() === $parent.active()}">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-3 img-container">
+              <img alt="business image" data-bind="attr:{src: image_url}"/>
+              <img alt="business image" data-bind="attr: { src: rating_img_url}"/>
+            </div>
+            <div class="col-xs-8">
+              <a data-bind="attr:{href: url}"><h4 data-bind="text: name"></h4></a>
+              <p data-bind="text: display_phone"></p>
+              <div data-bind="foreach: location.display_address">
+                <p data-bind="text: $data"></p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="switch" class="switch-bar" data-bind="click: switchShow, css: {switchShow: toggle}">
+      <i class="fa fa-angle-double-right fa-4x"></i>
+    </div>
+    <div id="map" >
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH-lgHzXHDMukrTqPlGZfJ1rY43LZPprw"
+            type="text/javascript" async defer></script>
+    <script src="/javascripts/vendor/jquery-1.11.2.min.js"></script>
+    <script src="/javascripts/vendor/knockout-3.2.0.js"></script>
+    <script src="/javascripts/app-engine.js"></script>
+  </body>
+</html>

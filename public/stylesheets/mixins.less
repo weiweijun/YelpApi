@@ -1,0 +1,173 @@
+/**
+ * Created by tianhengzhou on 12/3/15.
+ * This file contains the frequent mixins that I used.
+ */
+@import "bower_components/bootstrap/less/bootstrap.less";
+@import "variable.less";
+.screen {
+  /*Extra small for mobile and as default*/
+  /*Mobile device list shows up at the bottom*/
+  .bottom;
+  transition-duration: 1s;
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+    height: 100%;
+    width: 30%;
+    bottom: 0;
+    left: -30%;
+  }
+  /* All bigger device the list show up at the left hand side*/
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    height:100%;
+    width: 25%;
+    bottom: 0;
+    left: -25%;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+    height: 100%;
+    width: 20%;
+    bottom: 0;
+    left: -20%;
+  }
+}
+/* Place the List to bottom with 1/5 of height for Mobile display */
+.bottom {
+  bottom: -@bottom-size;
+  height: @bottom-size;
+  width: 100%;
+}
+.screen-show{
+  /*Extra small for mobile and as default*/
+  .bottom-show;
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+    bottom: 0;
+    .side-show
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    bottom: 0;
+    .side-show
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+    bottom: 0;
+    .side-show
+  }
+}
+/* The mixins used to pulling out the list from either bottom or side*/
+.bottom-show{
+  transform: translate(0,-100%);
+}
+.side-show{
+  transform: translate(100%);
+}
+/* Center the search box*/
+.center{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.center-horizontal {
+  left: 45%;
+}
+.center-vertical{
+  bottom: 45%;
+}
+.switch {
+  /*Extra small for mobile and as default*/
+  /*Mobile device list shows up at the bottom*/
+  .switch-bottom;
+  transition-duration: 1s;
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+    left: 0;
+    .center-vertical;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* All bigger device the list show up at the left hand side*/
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    left: 0;
+    .center-vertical;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+    left: 0;
+    .center-vertical;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.switch-bottom{
+  .center-horizontal;
+  bottom:0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.switch-show{
+  /*Extra small for mobile and as default*/
+  .switch-bottom-show;
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) {
+    left: 30%;
+    .center-vertical;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    left: 25%;
+    .center-vertical;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: @screen-lg-min) {
+    left: 20%;
+    .center-vertical;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+.switch-bottom-show{
+  bottom: @bottom-size;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+

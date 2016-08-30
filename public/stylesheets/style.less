@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300);
+@import "bower_components/font-awesome/less/font-awesome.less";
+@import "mixins.less";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-x: hidden;
+  position: relative;
+}
+div{
+  display: block;
+}
+#map {
+  height: 100%;
+}
+a {
+  color: #00B7FF;
+}
+.yelp-list{
+  z-index: 99;
+  overflow-y: auto;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.88);
+  .screen
+}
+.yelp-list ul {
+  padding: 0;
+  margin-bottom: 0;
+}
+.yelp-list ul{
+  li{
+    list-style: none;
+    border-bottom: 1px solid gainsboro;
+    cursor: pointer;
+    height: 200px;
+  }
+  .active{
+    background-color: lightgrey;
+  }
+  li:hover{
+    background-color: lightcyan;
+  }
+}
+.img-container{
+  text-align: center;
+  padding: 5px;
+  margin-top: 5%;
+}
+.img-container img:first-child{
+  .img-thumbnail
+}
+.info-window{
+  p{
+   max-width: 220px;
+  }
+  img{
+    max-width: 50px;
+    float: left;
+    display: block;
+    border-radius: 5%;
+    margin-right: 5px;
+  }
+}
+.switch-bar{
+  width: 32px;
+  position: absolute;
+  z-index: 98;
+  .switch
+}
+.search-box{
+  z-index: 99;
+  top: 2%;
+  background-color: rgba(255, 255, 255, 0.88);
+  padding: 5px;
+  .center;
+  i{
+    width:23%;
+    float: left;
+    position: relative;
+    left:5%;
+  }
+  input{
+    width: 65%;
+    height: 30px;
+    display: inline-block;
+    float: left;
+  }
+}
+.switchShow{
+  .switch-show
+}
+.show{
+  .screen-show
+}
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Cow_cartoon_04.svg" alt="cow image" onclick="clickaddcount()">
+<span id="counter">0</span>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript">
+    var count = 0;
+    var clickaddcount = function(){
+        count++;
+        $('#counter').html(count)
+    }
+</script>
+</body>
+</html>
