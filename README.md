@@ -1,4 +1,4 @@
-# FE-Nano-P5-Neightborhood-Map
+# Yelp-Neightborhood-Map
 ### How to Install and Run this Project
     1. Install Node.js in your computer.
     2. Change Directory to your project folder.
